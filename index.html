@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Пример настройки универсального датчика Escort TH</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #2563eb;
+      font-size: 2rem;
+      border-bottom: 2px solid #2563eb;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.25rem;
+      font-weight: 700;
+    }
+    h2 {
+      color: #2563eb;
+      font-size: 1.75rem;
+      border-bottom: 1px solid #e5e7eb;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.2rem;
+      font-weight: 600;
+    }
+    h3 {
+      color: #2563eb;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    h4 {
+      color: #2563eb;
+      font-size: 1.25rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      padding: 20px;
+      break-inside: avoid;
+    }
+    .step {
+      background: #f8fafc;
+      border-left: 4px solid #3b82f6;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+    .info-block {
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border-left: 5px solid #17a2b8;
+      background: #d1ecf1;
+    }
+    .warning-block {
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border-left: 5px solid #ffe066;
+      background: #fff3cd;
+    }
+    .success-block {
+      padding: 10px 15px;
+      margin: 10px 0;
+      border-radius: 4px;
+      border-left: 5px solid #28a745;
+      background: #d4edda;
+    }
+    .toc {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+    .toc-title {
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+    .toc a {
+      color: #3b82f6;
+      text-decoration: none;
+      transition: text-decoration 0.2s;
+    }
+    .toc a:hover {
+      text-decoration: underline;
+    }
+    img {
+      border-radius: 8px;
+      box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      max-width: 100%;
+      height: auto;
+    }
+    pre, code {
+      background: #f1f5f9;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 2px 4px;
+      font-size: 1em;
+    }
+    pre {
+      padding: 10px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 10px;
+    }
+    th {
+      background: #f8fafc;
+      font-weight: 600;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      section { page-break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto max-w-3xl py-8">
+    <nav class="toc">
+      <div class="toc-title"><i class="fa fa-list-ul mr-2"></i>Пример настройки универсального датчика Escort TH</div>
+    </nav>
+    <section id="info">
+      <h1>Общая информация</h1>
+      <div class="warning-block">
+        Для стабильного приема данных от датчика рекомендуется настроить датчик на выдачу данных с интервалом <b>раз в 10 сек или чаще</b>.<br>
+        При использовании настройки с более редкими интервалами выдачи данных в некоторых ситуациях устройство может периодически "терять" информацию от датчика.
+      </div>
+    </section>
+    <section id="setup">
+      <h1>Настройка</h1>
+      <div class="warning-block">
+        Идентификация датчика производится <b>по Имени датчика</b> или <b>MAC-адресу</b>.<br>
+        Если указаны оба поля, то приоритет отдается <b>Имени датчика</b>.
+      </div>
+      <div class="step">
+        <b>В конфигураторе:</b>
+        <ul class="list-disc pl-6">
+          <li>На вкладке <b>Bluetooth</b>:</li>
+        </ul>
+        <img src="images/2025-04-08_091711.png" alt="Скриншот вкладки Bluetooth">
+        <img src="images/2025-04-08_110841.png" alt="Скриншот вкладки Bluetooth 2">
+        <ul class="list-disc pl-6 mt-4">
+          <li>На вкладке <b>Настройка протокола</b>:</li>
+        </ul>
+        <img src="images/2025-04-08_093845.png" alt="Скриншот вкладки Настройка протокола">
+        <img src="images/2025-04-08_094158.png" alt="Скриншот вкладки Настройка протокола 2">
+        <img src="images/2025-04-08_110514.png" alt="Скриншот вкладки Настройка протокола 3">
+      </div>
+      <div class="step">
+        <b>По команде:</b>
+        <div class="info-block">
+          Примеры команд приведены для настройки по MAC-адресу.<br>
+          Если нужно настроить <b>по Имени датчика</b>, то в примерах команд нужно изменить:<br>
+          <code>(7,FF:FF:FF:FF:FF:FF,!)</code> на <code>(7,!,TH_000000)</code><br>
+          <br>
+          Замените в команде:<br>
+          <code>FF:FF:FF:FF:FF:FF</code> на реальные <b>MAC-адрес</b><br>
+          <code>TH_000000</code> на реальное <b>Имя датчика</b>.
+        </div>
+        <div class="mt-4">
+          <b>Пример для Датчика 1:</b>
+          <pre><code>*!EDITS BLUETOOTH:GLOBAL(1),CHANNEL1(SENS),SENS1(7,FF:FF:FF:FF:FF:FF,!),US1(1),TS1(0,1),PROTOCOL:FLEX(30,&45[1]163[1]167[1]207[111]223[1]238[11]),USRPRM1(is1,sl1,ub1),USRPRM2(pr1),USRPRM4(st1,ls1)</code></pre>
+        </div>
+        <div class="mt-4">
+          <b>Пример для Датчика 2:</b>
+          <pre><code>*!EDITS BLUETOOTH:GLOBAL(1),CHANNEL1(SENS),SENS2(7,FF:FF:FF:FF:FF:FF,!),US2(1),TS2(0,2),PROTOCOL:FLEX(30,&46[1]164[1]168[1]210[111]224[1]240[11]),USRPRM1(,,,is2,sl2,ub2),USRPRM2(,pr2),USRPRM4(,,st2,ls2)</code></pre>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
